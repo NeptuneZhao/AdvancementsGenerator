@@ -65,12 +65,14 @@
             this.新建项目ToolStripMenuItem.Name = "新建项目ToolStripMenuItem";
             this.新建项目ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.新建项目ToolStripMenuItem.Text = "新建项目...(&N)";
+            this.新建项目ToolStripMenuItem.Click += new System.EventHandler(this.新建项目ToolStripMenuItem_Click);
             // 
             // 打开项目ToolStripMenuItem
             // 
             this.打开项目ToolStripMenuItem.Name = "打开项目ToolStripMenuItem";
             this.打开项目ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.打开项目ToolStripMenuItem.Text = "打开项目...(&O)";
+            this.打开项目ToolStripMenuItem.Text = "打开存档...(&O)";
+            this.打开项目ToolStripMenuItem.Click += new System.EventHandler(this.打开存档ToolStripMenuItem_Click);
             // 
             // 帮助ToolStripMenuItem
             // 
@@ -84,18 +86,19 @@
             // 帮助主题ToolStripMenuItem
             // 
             this.帮助主题ToolStripMenuItem.Name = "帮助主题ToolStripMenuItem";
-            this.帮助主题ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.帮助主题ToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.帮助主题ToolStripMenuItem.Text = "帮助主题(&T)";
             // 
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.关于ToolStripMenuItem.Text = "关于(&A)";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
             // folderBrowserDialog1
             // 
+            this.folderBrowserDialog1.Description = "请选择项目所在存档文件夹(saves/之下)";
             this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
             // 
             // Form1
