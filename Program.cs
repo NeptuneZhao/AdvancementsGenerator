@@ -10,11 +10,11 @@ namespace AdvancementsGenerator
 {
 	internal static class Program
 	{
-		static readonly FileStream _Config = new FileStream("config.ini", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+		static readonly FileStream _Config = new("config.ini", FileMode.OpenOrCreate, FileAccess.ReadWrite);
 
-		static readonly StreamReader IReader = new StreamReader(_Config);
-		static readonly StreamWriter IWriter = new StreamWriter(_Config);
-		public static Dictionary<string, string> Configure = new Dictionary<string, string>()
+		static readonly StreamReader IReader = new(_Config);
+		static readonly StreamWriter IWriter = new(_Config);
+		public static Dictionary<string, string> Configure = new()
 		{
 			{"language", "zh-cn" },
 			{"default_path", "desktop" }
@@ -26,6 +26,7 @@ namespace AdvancementsGenerator
 		[STAThread]
 		static void Main()
 		{
+			/*
 			string config = IReader.ReadToEnd().Remove(' ');
 			if (config == "")
 			{
@@ -35,6 +36,7 @@ namespace AdvancementsGenerator
 			}
 			string[] config_split = config.Split('\n');
 			config_split.ToList().ForEach(x => Configure.Add(x.Split('=')[0], x.Split('=')[1]));
+			*/
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Form1());
